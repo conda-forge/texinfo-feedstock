@@ -7,9 +7,11 @@ package:
 source:
   url: http://ftp.gnu.org/gnu/texinfo/texinfo-{{ version }}.tar.gz
   sha256: a52d05076b90032cb2523673c50e53185938746482cf3ca0213e9b4b50ac2d3e
+  patches:
+    - osx_cross_compile_configure_sdkroot.patch  # [osx and build_platform != target_platform]
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -23,12 +25,15 @@ requirements:
     - gettext
     - gawk
     - make
+    - perl 5  # [build_platform != target_platform]
+    - cctools_{{ target_platform }}  # [osx]
+    - cctools_{{ build_platform }}  # [osx and build_platform != target_platform]
   host:
     - ncurses
     - libiconv  # [osx]
-    - perl
+    - perl 5
   run:
-    - perl
+    - perl 5
 
 test:
   commands:
