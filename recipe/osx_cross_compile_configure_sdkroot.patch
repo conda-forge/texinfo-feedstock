@@ -1,0 +1,16 @@
+--- configure.orig	2021-01-04 09:17:59.000000000 -0800
++++ configure	2021-01-04 09:20:49.000000000 -0800
+@@ -21923,10 +21923,11 @@
+   # env -i gives this build host configure a clean environment;
+   # consequently, we have to re-initialize $PATH.
+   env -i CC="$BUILD_CC" AR="$BUILD_AR" RANLIB="$BUILD_RANLIB" \
+-      PATH="$PATH" \
++      PATH="$PATH" SDKROOT="$SDKROOT" \
+       tools_only=1 \
+     ${confdir}/configure --build=${build} --host=${build} \
+-                         --disable-rpath --disable-nls
++                         --disable-rpath --disable-nls \
++                         --enable-perl-xs=no
+   cd .. || exit 1
+   { $as_echo "$as_me:${as_lineno-$LINENO}: Continuing with main configure (${host})." >&5
+ $as_echo "$as_me: Continuing with main configure (${host})." >&6;}
