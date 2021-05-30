@@ -25,7 +25,7 @@ requirements:
     - gettext
     - gawk
     - make
-    - perl   # [build_platform != target_platform]
+    - perl 5.*  # [build_platform != target_platform]
   host:
     - ncurses
     - libiconv  # [osx]
