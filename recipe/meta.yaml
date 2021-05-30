@@ -39,7 +39,7 @@ test:
 
 about:
   home: http://www.gnu.org/software/texinfo/
-  license: GPL-2.0 and GPL-3.0
+  license: GPL-2.0-only and GPL-3.0-only
   license_file: COPYING
   summary: 'The GNU Documentation System'
 
