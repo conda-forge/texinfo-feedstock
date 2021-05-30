@@ -25,15 +25,13 @@ requirements:
     - gettext
     - gawk
     - make
-    - perl 5  # [build_platform != target_platform]
-    - cctools_{{ target_platform }}  # [osx]
-    - cctools_{{ build_platform }}  # [osx and build_platform != target_platform]
+    - perl   # [build_platform != target_platform]
   host:
     - ncurses
     - libiconv  # [osx]
-    - perl 5
+    - perl
   run:
-    - perl 5
+    - perl
 
 test:
   commands:
