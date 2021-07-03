@@ -3,7 +3,7 @@ About texinfo
 
 Home: http://www.gnu.org/software/texinfo/
 
-Package license: GPL-2.0 and GPL-3.0
+Package license: GPL-2.0-only and GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/texinfo-feedstock/blob/master/LICENSE.txt)
 
