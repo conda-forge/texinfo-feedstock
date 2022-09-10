@@ -11,7 +11,7 @@ source:
     - osx_cross_compile_configure_sdkroot.patch  # [osx and build_platform != target_platform]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
