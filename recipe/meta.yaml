@@ -1,4 +1,4 @@
-{% set version = "6.8" %}
+{% set version = "7.0" %}
 
 package:
   name: texinfo
@@ -6,12 +6,12 @@ package:
 
 source:
   url: http://ftp.gnu.org/gnu/texinfo/texinfo-{{ version }}.tar.gz
-  sha256: 8e09cf753ad1833695d2bac0f57dc3bd6bcbbfbf279450e1ba3bc2d7fb297d08
+  sha256: 9261d4ee11cdf6b61895e213ffcd6b746a61a64fe38b9741a3aaa73125b35170
   patches:
     - osx_cross_compile_configure_sdkroot.patch  # [osx and build_platform != target_platform]
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:

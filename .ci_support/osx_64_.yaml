@@ -9,15 +9,12 @@ channel_sources:
 channel_targets:
 - conda-forge main
 libiconv:
-- '1.17'
+- '1'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 ncurses:
 - '6'
 perl:
 - 5.32.1
-pin_run_as_build:
-  libiconv:
-    max_pin: x.x
 target_platform:
 - osx-64
