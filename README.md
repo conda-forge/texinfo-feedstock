@@ -1,11 +1,11 @@
-About texinfo
-=============
+About texinfo-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/texinfo-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.gnu.org/software/texinfo/
 
 Package license: GPL-2.0-only and GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/texinfo-feedstock/blob/main/LICENSE.txt)
 
 Summary: The GNU Documentation System
 
