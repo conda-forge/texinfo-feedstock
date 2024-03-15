@@ -9,7 +9,8 @@ if [[ "$CONDA_BUILD_CROSS_COMPILATION" == "1" ]]; then
   export BUILD_RANLIB=$($CC_FOR_BUILD -print-prog-name=ranlib)
 fi
 
-./configure --prefix=$PREFIX PERL='/usr/bin/env perl'
+./configure --prefix=$PREFIX PERL='/usr/bin/env perl' \
+            --with-system-icu=yes
 
 make
 # OS X fails on `ii-0041-test` and `ii-0050-test` 2 out of 57.
