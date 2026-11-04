@@ -1,0 +1,25 @@
+Declare full termcap prototypes in the fallback path of info/terminal.c
+
+The fallback declarations are used when no termcap.h is found (e.g. for the
+native tools build when cross-compiling). With C23 (default in GCC 15) the
+empty parameter lists mean "no arguments", breaking the build.
+Taken from texinfo 7.3.
+
+--- a/info/terminal.c
++++ b/info/terminal.c
+@@ -44,9 +44,12 @@
+ char *BC, *UP;
+ char PC;      /* Pad character */
+ short ospeed; /* Terminal output baud rate */
+-extern int tgetnum (), tgetflag (), tgetent ();
+-extern char *tgetstr (), *tgoto ();
+-extern int tputs ();
++extern int tgetnum (char *id);
++extern int tgetflag (char *id);
++extern int tgetent (char *bp, const char *name);
++extern char *tgetstr (char *id, char **area);
++extern char *tgoto (const char *cap, int col, int row);
++extern int tputs (const char *str, int affcnt, int (*putc)(int));
+ #endif /* not HAVE_NCURSES_TERMCAP_H */
+ 
+ /* Function "hooks".  If you make one of these point to a function, that
