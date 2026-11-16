@@ -2,16 +2,18 @@
 
 package:
   name: texinfo
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: http://ftp.gnu.org/gnu/texinfo/texinfo-{{ version }}.tar.gz
   sha256: e86de7dfef6b352aa1bf647de3a6213d1567c70129eccbf8977706d9c91919c8
   patches:
     - osx_cross_compile_configure_sdkroot.patch  # [osx and build_platform != target_platform]
+    # Backport from texinfo 7.3: full termcap prototypes (C23 / GCC 15)
+    - terminal-c23-prototypes.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
